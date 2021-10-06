@@ -9,29 +9,29 @@
 Module.register("clock", {
 	// Module config defaults.
 	defaults: {
-		displayType: "digital", // options: digital, analog, both
+		displayType: "analog", // options: digital, analog, both
 
 		timeFormat: config.timeFormat,
-		displaySeconds: true,
-		showPeriod: true,
+		displaySeconds: false,
+		showPeriod: false,
 		showPeriodUpper: false,
 		clockBold: false,
 		showDate: true,
 		showWeek: false,
-		dateFormat: "dddd, LL",
+		dateFormat: "dddd, l",
 
 		/* specific to the analog clock */
-		analogSize: "200px",
-		analogFace: "simple", // options: 'none', 'simple', 'face-###' (where ### is 001 to 012 inclusive)
-		analogPlacement: "bottom", // options: 'top', 'bottom', 'left', 'right'
-		analogShowDate: "top", // options: false, 'top', or 'bottom'
+		analogSize: "100px",
+		analogFace: "face-012", // options: 'none', 'simple', 'face-###' (where ### is 001 to 012 inclusive)
+		analogPlacement: "top", // options: 'top', 'bottom', 'left', 'right'
+		analogShowDate: "bottom", // options: false, 'top', or 'bottom'
 		secondsColor: "#888888",
 		timezone: null,
 
 		showSunTimes: false,
 		showMoonTimes: false,
-		lat: 47.630539,
-		lon: -122.344147
+		lat: 37.33,
+		lon: 126.59
 	},
 	// Define required scripts.
 	getScripts: function () {
@@ -43,7 +43,7 @@ Module.register("clock", {
 	},
 	// Define start sequence.
 	start: function () {
-		Log.info("Starting module: " + this.name);
+		Log.info("Starting module: 124124124" + this.name);
 
 		// Schedule update interval.
 		var self = this;

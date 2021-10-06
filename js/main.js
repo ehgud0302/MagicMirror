@@ -6,6 +6,17 @@
  * By Michael Teeuw https://michaelteeuw.nl
  * MIT Licensed.
  */
+
+// mysql 불러오는게 안됨 이것만하면 될듯
+// var mysql = require('mysql');
+// const conn = {
+//     host: 'localhost',
+//     port: '3306',
+//     user: 'myid',
+//     password: 'root',
+//     database: 'MagicMirror'
+// };
+
 var MM = (function () {
 	var modules = [];
 
@@ -224,6 +235,44 @@ var MM = (function () {
 		} else {
 			headerWrapper[0].style.display = "none";
 		}
+
+		// 여기서 해줘도 그냥 잘되네.. 여기서 타이머로 계속 돌리자 그냥 되긴되네
+
+		// var notificationTimer = function() {
+		//     /* Mysql 불러오는거 해결후 주석해제
+		//     			var connection = mysql.createConnection(conn);
+		//     			connection.connect();
+
+		//     			var Query = "SELECT *FROM Command WHERE id=1"; // id가 1인 첫번째만 사용
+		//     			connection.query(Query, function (err, results, filds) {
+		//     				if(err){
+		//     					Log.info(err);
+		//     				}
+		//     				else // 성공시
+		//     				{
+		//     					// 기존 저장된 idx와 바뀐경우, data 처리 추가 피
+		//     					Log.info(results[0].idx);
+		//     					Log.info(results[0].data);
+
+		//     				}
+
+		//     			});
+		//     			connection.end();
+		//     */
+		//     setTimeout(notificationTimer, 1000);
+
+		//     // 이거 동작하니까 알아서 사용하면 될듯
+		//     sendNotification("YOUTUBE_LOAD", {
+		//         type: "id", //REQUIRED
+		//         id: "UOxkGD8qRB4", //REQUIRED. YouTube Video Id.
+		//         loop: false, //OPTIONAL
+		//         autoplay: true, //OPTIONAL
+		//     })
+
+		// };
+		// setTimeout(notificationTimer, 1000);
+
+		//
 	};
 
 	/**
